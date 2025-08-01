@@ -67,7 +67,7 @@ module "lb_security_group" {
 
   ingress_cidr_blocks = ["10.0.0.0/16"]
   ingress_rules       = ["ssh-tcp"]
-  ingress_with_cidr_blocks = [
+  /*ingress_with_cidr_blocks = [
     {
       from_port   = 22
       to_port     = 22
@@ -75,7 +75,7 @@ module "lb_security_group" {
       description = "SSH restricted to internal network"
       cidr_blocks = "10.0.0.0/16"
     }
-  ]
+  ]*/
 
   tags = {
     project     = "project-alpha",
